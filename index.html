@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DevBugTracker - Never Forget a Bug Again</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- SwiperJS CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -33,71 +35,161 @@
 
     <!-- Hero Section -->
     <section class="hero">
+        <div class="hiw-bg-svg">
+            <svg width="100%" height="320" viewBox="0 0 1440 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#e0e7ef" fill-opacity="0.6" d="M0,160L60,170.7C120,181,240,203,360,197.3C480,192,600,160,720,133.3C840,107,960,85,1080,101.3C1200,117,1320,171,1380,197.3L1440,224L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+            </svg>
+        </div>
         <div class="hero-container">
             <div class="hero-content">
-                <h1>Never Forget a Bug Again</h1>
+                <h1>
+                    <span class="colorful-word">Never</span> 
+                    <span class="colorful-word">Forget</span> 
+                    <span class="colorful-word">a</span> 
+                    <span class="colorful-word">Bug</span> 
+                    <span class="colorful-word">Again</span>
+                </h1>
                 <p class="hero-subtitle">The ultimate bug tracking solution for developers. Track, manage, and resolve bugs efficiently with our intuitive platform.</p>
                 <div class="hero-buttons">
                     <button class="btn-primary">Get Started Free</button>
                     <button class="btn-secondary">Watch Demo</button>
                 </div>
-                <div class="hero-stats">
-                    <div class="stat">
-                        <span class="stat-number">10K+</span>
-                        <span class="stat-label">Bugs Tracked</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">5K+</span>
-                        <span class="stat-label">Developers</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">99%</span>
-                        <span class="stat-label">Satisfaction</span>
-                    </div>
-                </div>
+                <!-- Removed hero-stats section as requested -->
             </div>
             <div class="hero-image">
-                <div class="dashboard-preview">
-                    <div class="dashboard-header">
-                        <div class="dashboard-tabs">
-                            <span class="tab active">All Bugs</span>
-                            <span class="tab">In Progress</span>
-                            <span class="tab">Resolved</span>
-                        </div>
-                    </div>
-                    <div class="dashboard-content">
-                        <div class="bug-item">
-                            <div class="bug-priority high"></div>
-                            <div class="bug-info">
-                                <h4>Login button not working</h4>
-                                <p>Users unable to login with valid credentials</p>
+                <!-- Swiper for dashboard previews start -->
+                <div class="dashboard-swiper-container">
+                    <div class="swiper dashboard-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="dashboard-preview">
+                                    <div class="dashboard-header">
+                                        <div class="dashboard-tabs">
+                                            <span class="tab active">All Bugs</span>
+                                            <span class="tab">In Progress</span>
+                                            <span class="tab">Resolved</span>
+                                        </div>
+                                    </div>
+                                    <div class="dashboard-content">
+                                        <div class="bug-item">
+                                            <div class="bug-priority high"></div>
+                                            <div class="bug-info">
+                                                <h4>Login button not working</h4>
+                                                <p>Users unable to login with valid credentials</p>
+                                            </div>
+                                            <div class="bug-status in-progress">In Progress</div>
+                                        </div>
+                                        <div class="bug-item">
+                                            <div class="bug-priority medium"></div>
+                                            <div class="bug-info">
+                                                <h4>Responsive design issues</h4>
+                                                <p>Layout breaks on mobile devices</p>
+                                            </div>
+                                            <div class="bug-status new">New</div>
+                                        </div>
+                                        <div class="bug-item">
+                                            <div class="bug-priority low"></div>
+                                            <div class="bug-info">
+                                                <h4>Minor UI alignment</h4>
+                                                <p>Button alignment slightly off</p>
+                                            </div>
+                                            <div class="bug-status resolved">Resolved</div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="bug-status in-progress">In Progress</div>
-                        </div>
-                        <div class="bug-item">
-                            <div class="bug-priority medium"></div>
-                            <div class="bug-info">
-                                <h4>Responsive design issues</h4>
-                                <p>Layout breaks on mobile devices</p>
+                            <div class="swiper-slide">
+                                <div class="dashboard-preview">
+                                    <div class="dashboard-header">
+                                        <div class="dashboard-tabs">
+                                            <span class="tab active">All Bugs</span>
+                                            <span class="tab">In Progress</span>
+                                            <span class="tab">Resolved</span>
+                                        </div>
+                                    </div>
+                                    <div class="dashboard-content">
+                                        <div class="bug-item">
+                                            <div class="bug-priority high"></div>
+                                            <div class="bug-info">
+                                                <h4>API timeout error</h4>
+                                                <p>API requests timing out intermittently</p>
+                                            </div>
+                                            <div class="bug-status new">New</div>
+                                        </div>
+                                        <div class="bug-item">
+                                            <div class="bug-priority medium"></div>
+                                            <div class="bug-info">
+                                                <h4>Profile image not uploading</h4>
+                                                <p>Users unable to upload profile images</p>
+                                            </div>
+                                            <div class="bug-status in-progress">In Progress</div>
+                                        </div>
+                                        <div class="bug-item">
+                                            <div class="bug-priority low"></div>
+                                            <div class="bug-info">
+                                                <h4>Typo in dashboard title</h4>
+                                                <p>Dashboard title misspelled</p>
+                                            </div>
+                                            <div class="bug-status resolved">Resolved</div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="bug-status new">New</div>
-                        </div>
-                        <div class="bug-item">
-                            <div class="bug-priority low"></div>
-                            <div class="bug-info">
-                                <h4>Minor UI alignment</h4>
-                                <p>Button alignment slightly off</p>
+                            <div class="swiper-slide">
+                                <div class="dashboard-preview">
+                                    <div class="dashboard-header">
+                                        <div class="dashboard-tabs">
+                                            <span class="tab active">All Bugs</span>
+                                            <span class="tab">In Progress</span>
+                                            <span class="tab">Resolved</span>
+                                        </div>
+                                    </div>
+                                    <div class="dashboard-content">
+                                        <div class="bug-item">
+                                            <div class="bug-priority high"></div>
+                                            <div class="bug-info">
+                                                <h4>Notifications not sent</h4>
+                                                <p>Users not receiving email notifications</p>
+                                            </div>
+                                            <div class="bug-status in-progress">In Progress</div>
+                                        </div>
+                                        <div class="bug-item">
+                                            <div class="bug-priority medium"></div>
+                                            <div class="bug-info">
+                                                <h4>Settings not saving</h4>
+                                                <p>Changes in settings are not persisted</p>
+                                            </div>
+                                            <div class="bug-status new">New</div>
+                                        </div>
+                                        <div class="bug-item">
+                                            <div class="bug-priority low"></div>
+                                            <div class="bug-info">
+                                                <h4>Footer links broken</h4>
+                                                <p>Some footer links lead to 404</p>
+                                            </div>
+                                            <div class="bug-status resolved">Resolved</div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="bug-status resolved">Resolved</div>
                         </div>
+                        <!-- Navigation buttons -->
+                        <!-- <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div> -->
                     </div>
                 </div>
+                <!-- Swiper for dashboard previews end -->
             </div>
         </div>
     </section>
 
     <!-- Features Section -->
     <section id="features" class="features">
+        <div class="hiw-bg-svg">
+            <svg width="100%" height="320" viewBox="0 0 1440 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#e0e7ef" fill-opacity="0.6" d="M0,160L60,170.7C120,181,240,203,360,197.3C480,192,600,160,720,133.3C840,107,960,85,1080,101.3C1200,117,1320,171,1380,197.3L1440,224L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+            </svg>
+        </div>
         <div class="container">
             <div class="section-header">
                 <h2>Why Choose DevBugTracker?</h2>
@@ -110,6 +202,7 @@
                     </div>
                     <h3>Quick Bug Creation</h3>
                     <p>Create bug reports in seconds with our streamlined interface. No more forgetting important details.</p>
+                    <div class="feature-extra">Add bugs with one click and minimal input.</div>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
@@ -117,6 +210,7 @@
                     </div>
                     <h3>Smart Categorization</h3>
                     <p>Organize bugs by priority, status, and type. Find what you need instantly.</p>
+                    <div class="feature-extra">Auto-grouping and color-coded tags for clarity.</div>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
@@ -124,6 +218,7 @@
                     </div>
                     <h3>Powerful Search</h3>
                     <p>Search through your bug database with advanced filters and quick find functionality.</p>
+                    <div class="feature-extra">Instant results as you type, with smart filters.</div>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
@@ -131,6 +226,7 @@
                     </div>
                     <h3>Progress Tracking</h3>
                     <p>Monitor your bug resolution progress with detailed analytics and insights.</p>
+                    <div class="feature-extra">Visual charts and daily/weekly summaries.</div>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
@@ -138,6 +234,7 @@
                     </div>
                     <h3>Mobile Friendly</h3>
                     <p>Access your bug tracker anywhere, anytime. Fully responsive design for all devices.</p>
+                    <div class="feature-extra">Optimized for phones and tablets.</div>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
@@ -145,6 +242,7 @@
                     </div>
                     <h3>Secure & Private</h3>
                     <p>Your data is secure with enterprise-grade encryption and privacy protection.</p>
+                    <div class="feature-extra">End-to-end encryption and privacy-first design.</div>
                 </div>
             </div>
         </div>
@@ -157,27 +255,31 @@
                 <h2>How It Works</h2>
                 <p>Get started in minutes with our simple 3-step process</p>
             </div>
-            <div class="steps-container">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <div class="step-content">
+            <div class="hiw-timeline hiw-timeline-horizontal">
+                <div class="hiw-timeline-line"><div class="hiw-timeline-dot"></div></div>
+                <div class="hiw-step hiw-step-left" data-step="1">
+                    <div class="hiw-icon"><i class="fas fa-bug"></i></div>
+                    <div class="hiw-card">
                         <h3>Create Bug Report</h3>
                         <p>Quickly log bugs with title, description, priority, and reproduction steps.</p>
                     </div>
+                    <div class="hiw-confetti"></div>
                 </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <div class="step-content">
+                <div class="hiw-step hiw-step-right" data-step="2">
+                    <div class="hiw-icon"><i class="fas fa-tasks"></i></div>
+                    <div class="hiw-card">
                         <h3>Track Progress</h3>
                         <p>Update status as you work on bugs. Move from New to In Progress to Resolved.</p>
                     </div>
+                    <div class="hiw-confetti"></div>
                 </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <div class="step-content">
+                <div class="hiw-step hiw-step-left" data-step="3">
+                    <div class="hiw-icon"><i class="fas fa-check-circle"></i></div>
+                    <div class="hiw-card">
                         <h3>Resolve & Archive</h3>
                         <p>Mark bugs as resolved and keep them for future reference and learning.</p>
                     </div>
+                    <div class="hiw-confetti"></div>
                 </div>
             </div>
         </div>
@@ -321,5 +423,20 @@
     </footer>
 
     <script src="script.js"></script>
+    <!-- SwiperJS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      const dashboardSwiper = new Swiper('.dashboard-swiper', {
+        loop: true,
+        autoplay: {
+          delay: 3500,
+          disableOnInteraction: false,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
+    </script>
 </body>
 </html> 
