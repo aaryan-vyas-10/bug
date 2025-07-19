@@ -238,3 +238,18 @@ document.addEventListener('DOMContentLoaded', function () {
   }, { threshold: 0.3 });
   observer.observe(hiwSection);
 })();
+
+// Contact card copy-to-clipboard interactivity
+(function() {
+  const cards = document.querySelectorAll('.contact-card[data-number]');
+  cards.forEach(card => {
+    card.addEventListener('click', function() {
+      const number = card.getAttribute('data-number');
+      if (number) {
+        navigator.clipboard.writeText(number);
+        card.classList.add('copied');
+        setTimeout(() => card.classList.remove('copied'), 1200);
+      }
+    });
+  });
+})();

@@ -287,6 +287,11 @@
 
     <!-- Pricing Section -->
     <section id="pricing" class="pricing">
+        <div class="pricing-bg-svg">
+            <svg width="100%" height="220" viewBox="0 0 1440 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#e0e7ef" fill-opacity="0.5" d="M0,160L60,170.7C120,181,240,203,360,197.3C480,192,600,160,720,133.3C840,107,960,85,1080,101.3C1200,117,1320,171,1380,197.3L1440,224L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
+            </svg>
+        </div>
         <div class="container">
             <div class="section-header">
                 <h2>Simple Pricing</h2>
@@ -342,31 +347,50 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
+            <div class="section-header">
+                <h2>Contact & Support</h2>
+                <div class="section-underline"></div>
+                <p>We're here to help! Reach out to our support team or use the form below.</p>
+            </div>
             <div class="contact-content">
-                <div class="contact-info">
-                    <h2>Ready to Get Started?</h2>
-                    <p>Join thousands of developers who never forget a bug again.</p>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <span>support@devbugtracker.com</span>
+                <div class="contact-cards">
+                    <div class="contact-card" data-number="9409251162">
+                        <div class="contact-avatar">AV</div>
+                        <div class="contact-card-info">
+                            <div class="contact-card-name">Aaryan Vyas</div>
+                            <div class="contact-card-number"><i class="fas fa-phone"></i> <a href="tel:9409251162">9409251162</a></div>
                         </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <span>+1 (555) 123-4567</span>
+                        <span class="contact-tooltip">Copied!</span>
+                    </div>
+                    <div class="contact-card" data-number="8980272520">
+                        <div class="contact-avatar">H</div>
+                        <div class="contact-card-info">
+                            <div class="contact-card-name">Harpalshin</div>
+                            <div class="contact-card-number"><i class="fas fa-phone"></i> <a href="tel:8980272520">8980272520</a></div>
+                        </div>
+                        <span class="contact-tooltip">Copied!</span>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-avatar"><i class="fas fa-envelope"></i></div>
+                        <div class="contact-card-info">
+                            <div class="contact-card-name">Support Email</div>
+                            <div class="contact-card-number"><a href="mailto:support@devbugtracker.com">support@devbugtracker.com</a></div>
                         </div>
                     </div>
                 </div>
                 <div class="contact-form">
                     <form id="contactForm">
-                        <div class="form-group">
-                            <input type="text" id="name" placeholder="Your Name" required>
+                        <div class="form-group floating-label">
+                            <input type="text" id="name" required>
+                            <label for="name">Your Name</label>
                         </div>
-                        <div class="form-group">
-                            <input type="email" id="email" placeholder="Your Email" required>
+                        <div class="form-group floating-label">
+                            <input type="email" id="email" required>
+                            <label for="email">Your Email</label>
                         </div>
-                        <div class="form-group">
-                            <textarea id="message" placeholder="Your Message" rows="4" required></textarea>
+                        <div class="form-group floating-label">
+                            <textarea id="message" rows="4" required></textarea>
+                            <label for="message">Your Message</label>
                         </div>
                         <button type="submit" class="btn-primary">Send Message</button>
                     </form>
@@ -428,6 +452,7 @@
     <script>
       const dashboardSwiper = new Swiper('.dashboard-swiper', {
         loop: true,
+        spaceBetween: 40,
         autoplay: {
           delay: 3500,
           disableOnInteraction: false,
